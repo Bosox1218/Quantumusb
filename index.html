@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum USB Stick</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #eee;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: hotpink;
+        }
+        .countdown {
+            font-size: 20px;
+            color: #ff4444;
+            margin: 10px 0;
+        }
+        .buy-btn {
+            background-color: hotpink;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .tagline {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .reviews {
+            margin-top: 40px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .reviews p {
+            font-size: 15px;
+            color: #aaa;
+        }
+        .reviews .name {
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quantum USB Stick</h1>
+
+    <div class="countdown">🔥 Expires in: <span id="timer">24h 00m 00s</span></div>
+
+    <a href="https://quantumusbstick.gumroad.com/l/chaos" class="buy-btn">🚀 Buy Now – $199 Chaos Drive</a>
+
+    <div class="tagline">
+        The vault they don’t want you to open.<br>
+        You order today. I ship tomorrow. You profit forever.<br>
+        No fluff. No moral compass. Just results.
+    </div>
+
+    <div class="reviews">
+        <p>"I plugged it in and found a folder that changed my life." – <span class="name">Nick D.</span></p>
+        <p>"Within 24 hours, I had a passive income stream running. This thing’s illegal in spirit." – <span class="name">Sasha M.</span></p>
+        <p>"It’s like a black market MBA in a stick." – <span class="name">Brandon T.</span></p>
+    </div>
+
+    <script>
+        // Simple countdown logic for display only
+        const countdown = document.getElementById("timer");
+        let totalSeconds = 86400;
+
+        function updateTimer() {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            countdown.textContent = `${hours}h ${minutes}m ${seconds}s`;
+            if (totalSeconds > 0) totalSeconds--;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>

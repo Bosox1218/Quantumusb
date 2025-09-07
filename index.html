@@ -20,6 +20,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum USB Stick</title>
     <style>
+        <script>
+  function countdown() {
+    const countdownTime = new Date().getTime() + (48 * 60 * 60 * 1000); // 48 hrs from now
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownTime - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "⏳ This drop has ended.";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = `🔥 Expires in: ${hours}h ${minutes}m ${seconds}s`;
+
+      setTimeout(updateCountdown, 1000);
+    }
+
+    updateCountdown();
+  }
+
+  countdown();
+</script>
         body {
 <!-- COUNTDOWN TIMER -->
 <div id="countdown" style="font-size: 22px; font-weight: bold; color: red; text-align: center; margin: 20px 0;">

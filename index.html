@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quantum USB Stick - AI tools, finance exploits, and secret PDFs loaded into one exclusive USB drop." />
+  <meta name="keywords" content="Quantum USB Stick, AI USB, passive income tools, digital dark tools, hidden PDFs, shady USB, make money online">
+  <meta name="author" content="Quantum Labs">
+  <title>Quantum USB Stick</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Courier New', Courier, monospace;
+      color: #e3e3e3;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff0077;
+      margin-bottom: 0.5em;
+    }
+    .timer {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: red;
+      margin: 10px 0 30px;
+    }
+    .cta-button {
+      background: #ff0077;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-bottom: 2em;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #cc0060;
+    }
+    .reviews {
+      background: #1a1a1a;
+      padding: 1em;
+      border-radius: 8px;
+      max-width: 600px;
+      margin-top: 2em;
+      font-size: 0.9em;
+    }
+    .reviews p {
+      margin-bottom: 1em;
+      color: #bbb;
+    }
+    .review-author {
+      color: #ff0077;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 3em;
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+</head>
+<body>
+
+  <h1>Quantum USB Stick</h1>
+  <div class="timer" id="countdown">🔥 Expires in: ...</div>
+
+  <a class="cta-button" href="https://yourstore.gumroad.com/l/quantumusb" data-gumroad-overlay-checkout>
+    🚀 Buy Now – $199 Chaos Drive
+  </a>
+
+  <p>The vault they don’t want you to open.<br />
+     You order today. I ship tomorrow. You profit forever.<br />
+     No fluff. No moral compass. Just results.</p>
+
+  <div class="reviews">
+    <p>"I plugged it in and found a folder that changed my life." <span class="review-author">– Nick D.</span></p>
+    <p>"Within 24 hours, I had a passive income stream running. This thing’s illegal in spirit." <span class="review-author">– Sasha M.</span></p>
+    <p>"It’s like a black market MBA in a stick." <span class="review-author">– Brandon T.</span></p>
+  </div>
+
+  <footer>
+    Quantum Labs™ – Operate in shadows. Profit in daylight. | Limited Supply.
+  </footer>
+
+  <script>
+    const countdownDate = new Date().getTime() + 48 * 60 * 60 * 1000;
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "⏳ This drop has ended.";
+        return;
+      }
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        `🔥 Expires in: ${hours}h ${minutes}m ${seconds}s`;
+      setTimeout(updateCountdown, 1000);
+    }
+    updateCountdown();
+  </script>
+
+</body>
+</html>
